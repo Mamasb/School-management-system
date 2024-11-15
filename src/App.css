@@ -1,23 +1,35 @@
+/* Color Variables */
+:root {
+  --primary-color: #1c3b6f;  /* Deep blue */
+  --secondary-color: #f36f6f; /* CTA Button color */
+  --text-color-light: #666;
+  --text-color-dark: white;
+  --font-family-sans: Arial, sans-serif;
+}
+
 /* Global Layout */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: var(--font-family-sans);
   display: flex;
   flex-direction: column;
 }
 
-/* Ensure the content area grows to take available space */
+/* App Container */
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures content takes full height */
+  min-height: 100vh;
+  background-color: #f9f9f9; /* Light background */
 }
 
 /* Main content area */
 .main-content {
   display: flex;
-  flex-grow: 1; /* Make sure the content takes up available space */
+  flex-grow: 1;
+  background-color: white; /* Page background */
 }
 
 /* Content Area for each page */
@@ -28,12 +40,11 @@ body, html {
 
 /* Footer */
 .footer {
-  background-color: #1c3b6f; /* Deep blue background */
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
   padding: 40px 0;
-  font-family: Arial, sans-serif;
   text-align: center;
-  margin-top: 40px; /* Space between content and footer */
+  margin-top: 40px;
 }
 
 /* Team Section */
@@ -52,6 +63,7 @@ body, html {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .team-member {
@@ -74,7 +86,7 @@ body, html {
 
 .team-member p {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-color-light);
 }
 
 /* Carousel Section */
@@ -82,6 +94,7 @@ body, html {
   position: relative;
   width: 100%;
   height: 400px;
+  background-color: #333;
 }
 
 .carousel .carousel-caption {
@@ -90,7 +103,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: var(--text-color-dark);
 }
 
 .carousel-caption h1 {
@@ -105,8 +118,8 @@ body, html {
 }
 
 .carousel .cta-button {
-  background-color: #f36f6f;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
   padding: 10px 20px;
   text-decoration: none;
   font-size: 1rem;
@@ -116,3 +129,11 @@ body, html {
 .carousel .cta-button:hover {
   background-color: #e85a5a;
 }
+
+/* Utility classes for spacing */
+.mt-20 { margin-top: 20px; }
+.mt-40 { margin-top: 40px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-40 { margin-bottom: 40px; }
+.pt-20 { padding-top: 20px; }
+.pb-20 { padding-bottom: 20px; }
