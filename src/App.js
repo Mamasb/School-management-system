@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage/landingpage';
 import RegistrationForm from './pages/Registration/RegistrationForm';
+
 import LoginForm from './pages/Registration/LoginForm';
 import ServicesPage from './pages/Registration/ServicesPage';  // New ServicesPage component
 import './App.css';
